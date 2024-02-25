@@ -1,0 +1,79 @@
+pip install numpy
+pip install opencv-python
+pip install matplotlib
+
+import numpy as np
+import cv2
+from matplotlib import pyplot as plt
+
+def log_transformation(image):
+    c = 255 / np.log(1 + np.max(image))
+    log_transformed = c * np.log(1 + image)
+    log_transformed = np.array(log_transformed, dtype=np.uint8)
+    return log_transformed
+
+def power_law_transformation(image, gamma):
+    power_transformed = np.power(image, gamma)
+    power_transformed = np.array(power_transformed, dtype=np.uint8)
+    return power_transformed
+
+def contrast_adjustment(image, alpha, beta):
+    adjusted = cv2.convertScaleAbs(image, alpha=alpha, beta=beta)
+    return adjusted
+
+def histogram_equalization(image):
+    equalized = cv2.equalizeHist(image)
+    return equalized
+
+def thresholding(image, threshold):
+    _, thresholded = cv2.threshold(image, threshold, 255, cv2.THRESH_BINARY)
+    return thresholded
+
+def halftoning(image):
+    _, binary = cv2.threshold(image, 128, 255, cv2.THRESH_BINARY)
+    return binary
+
+# Read an image
+image = cv2.imread("th.jpg", 0) 
+
+# Apply transformations
+log_transformed = log_transformation(image)
+power_transformed = power_law_transformation(image, gamma=0.5)  # Example gamma value
+adjusted_contrast = contrast_adjustment(image, alpha=1.5, beta=0)  # Example alpha and beta values
+equalized = histogram_equalization(image)
+thresholded = thresholding(image, threshold=128)  # Example threshold value
+halftoned = halftoning(image)
+
+# Save transformed images to files
+cv2.imwrite("log_transformed.jpg", log_transformed)
+cv2.imwrite("power_transformed.jpg", power_transformed)
+cv2.imwrite("adjusted_contrast.jpg", adjusted_contrast)
+cv2.imwrite("equalized.jpg", equalized)
+cv2.imwrite("thresholded.jpg", thresholded)
+cv2.imwrite("halftoned.jpg", halftoned)
+
+# Display original image and paths to the transformed images
+plt.figure(figsize=(12, 6))
+plt.subplot(2, 3, 1)
+plt.imshow(image, cmap="gray")
+plt.title("Original")
+
+transformations = {
+    "Log Transformed": "log_transformed.jpg",
+    "Power Law Transformed": "power_transformed.jpg",
+    "Contrast Adjusted": "adjusted_contrast.jpg",
+    "Histogram Equalized": "equalized.jpg",
+    "Thresholded": "thresholded.jpg",
+    "Halftoned": "halftoned.jpg",
+}
+
+# Ensure that the loop doesn't exceed the number of transformations or the subplot grid
+for i, (transformation, path) in enumerate(transformations.items(), start=2):
+    if i <= 6:  # Ensure that we don't exceed the maximum number of subplots
+        plt.subplot(2, 3, i)
+        transformed_image = cv2.imread(path, 0)
+        plt.imshow(transformed_image, cmap="gray")
+        plt.title(transformation)
+
+plt.tight_layout()
+plt.show()

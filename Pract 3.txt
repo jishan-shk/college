@@ -1,0 +1,72 @@
+pip install numpy scipy matplotlib
+
+import numpy as np
+import scipy.signal
+import matplotlib.pyplot as plt
+
+# Generate a simple sound signal
+fs = 1000  # Sampling frequency
+t = np.linspace(0, 1, fs)  # 1 second signal
+freq = 5  # Frequency of the signal
+sound_signal = np.sin(2 * np.pi * freq * t)
+# Create a simple filter/kernel for convolution
+kernel = np.array([1, -1])
+# Perform convolution
+conv_result = np.convolve(sound_signal, kernel, mode="same")
+
+# Plot original sound signal
+plt.figure(figsize=(10, 6))
+plt.subplot(3, 1, 1)
+plt.plot(t, sound_signal)
+plt.title("Original Sound Signal")
+plt.xlabel("Time")
+plt.ylabel("Amplitude")
+
+# Plot the kernel
+plt.subplot(3, 1, 2)
+plt.stem(kernel)
+plt.title("Kernel")
+plt.xlabel("Sample")
+plt.ylabel("Value")
+
+# Plot result of convolution
+plt.subplot(3, 1, 3)
+plt.plot(t, conv_result)
+plt.title("Result of Convolution")
+plt.xlabel("Time")
+plt.ylabel("Amplitude")
+plt.tight_layout()
+plt.show()
+
+# Template Matching
+# Generate a noisy sound signal
+noise = np.random.normal(0, 0.1, len(sound_signal))
+noisy_signal = sound_signal + noise
+# Generate a template (pattern to search for)
+template = np.sin(2 * np.pi * freq * t)
+# Perform template matching
+corr_result = scipy.signal.correlate(noisy_signal, template, mode="same")
+
+# Plot the noisy signal
+plt.figure(figsize=(10, 6))
+plt.subplot(3, 1, 1)
+plt.plot(t, noisy_signal)
+plt.title("Noisy Sound Signal")
+plt.xlabel("Time")
+plt.ylabel("Amplitude")
+
+# Plot the template
+plt.subplot(3, 1, 2)
+plt.plot(t, template)
+plt.title("Template")
+plt.xlabel("Time")
+plt.ylabel("Amplitude")
+
+# Plot the result of template matching
+plt.subplot(3, 1, 3)
+plt.plot(t, corr_result)
+plt.title("Result of Template Matching")
+plt.xlabel("Time")
+plt.ylabel("Correlation")
+plt.tight_layout()
+plt.show()
