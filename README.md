@@ -35,3 +35,5 @@ GDrive - https://drive.google.com/drive/folders/1GZuKd1975MJBLs9dF6w0Zua6wqVXRRd
 
 Cassandra - cassandra -f to start server
 Cassandra - cqlsh for starting the sql cmd
+
+Redis cli - run redis-cli.exe
