@@ -32,3 +32,6 @@
   b) Store and retrieve data from Redis cache using appropriate commands
 
 GDrive - https://drive.google.com/drive/folders/1GZuKd1975MJBLs9dF6w0Zua6wqVXRRd9?usp=sharing
+
+Cassandra - cassandra -f to start server
+Cassandra - cqlsh for starting the sql cmd
