@@ -1,15 +1,23 @@
-1 Write a program to implement sentence segmentation and word tokenization
+Practical 1 
+Aim :1	Install and understand Docker container, Node.js, Java and Hyperledger Fabric, Ethereum and perform necessary software installation on local machine/create instance on Cloud to run.	
 
-2 Write a program to Implement stemming and lemmatization 
+Practical 2
+Aim : 2	Create and deploy a block chain network using Hyperledger Fabric SDK for Java	
 
-3 Write a program to Implement a tri-gram model 
+Practical 3
+Aim : Interact with a block chain network. Execute transactions and requests against a block chain network by creating an app to test the network and its rules
 
-4 Write a program to Implement PoS tagging using HMM & Neural Model 
+Practical 4
+Aim : Deploy an asset-transfer app using block chain. Learn app development within a Hyperledger Fabric network.
 
-5 Write a program to Implement syntactic parsing of a given text 
+Practical 5
+Aim : Use block chain to track fitness club rewards.
 
-6 Write a program to Implement dependency parsing of a given text 
+Practical 6
+Aim : Build a web app that uses Hyperledger Fabric to track and trace member rewards.
 
-7 Write a program to Implement Named Entity Recognition (NER) 
+Practical  7
+Aim : Car auction network: A Hello World example with Hyperledger Fabric Node SDK and IBM Block chain Starter Plan. Use Hyperledger Fabric to invoke chaincode while storing results and data in the starter plan
 
-8 Write a program to Implement Text Summarization for the given sample text
+Pactical 8
+Aim : Develop a voting application using Hyperledger and Ethereum.
