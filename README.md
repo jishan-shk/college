@@ -17,3 +17,7 @@
 
 
 https://drive.google.com/file/d/1gZ1jYGR3lLlX_en5KwCqIYULS6g1MoUt/view?usp=drivesdk
+
+
+Word doc 
+https://docs.google.com/document/d/1gdWaHy5CvJON5lO4rlnaMHIXb-IorkO-/edit?usp=drivesdk&ouid=100447235062333989396&rtpof=true&sd=true
