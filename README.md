@@ -1,23 +1,67 @@
-1. Exploring and building a verification lab for penetration testing (Kali Linux). 
+1.
 
-2. Use of open-source intelligence and passive reconnaissance.
+Creating Charts and Reports in 
 
- 3. Practical on enumerating host, port, and service scanning. 
+Power BI
 
-4. Practical on vulnerability scanning and assessment. 
+ 2.
 
-5. Practical on use of Social Engineering Toolkit. 
+Time Intelligence and data 
 
-6. Practical on Exploiting Web-based applications. 
+analysis Functions with DAX 
 
-7. Practical on Using Metasploit Framework for exploitation. 
- 
+ 3.
 
-8. Practical on Injecting Code in Data Driven Applications: SQL Injection.
+Create one-dimensional data 
 
+using series and perform 
 
-https://drive.google.com/file/d/1gZ1jYGR3lLlX_en5KwCqIYULS6g1MoUt/view?usp=drivesdk
+various operations on it
 
+ 4.
 
-Word doc 
-https://docs.google.com/document/d/1gdWaHy5CvJON5lO4rlnaMHIXb-IorkO-/edit?usp=drivesdk&ouid=100447235062333989396&rtpof=true&sd=true
+Perform Reshaping of the 
+
+hierarchical data and pivoting 
+
+data frame data
+
+ 5.
+
+Connecting and extracting with various 
+
+data resources in tableau and Perform 
+
+calculations and creating parameters in 
+
+Tableau.
+
+ 6.
+
+Designing Tableau Dashboards 
+
+for different displays and 
+
+devices
+
+ 7.
+
+Create a Trend model using 
+
+data, Analyse-it and use it for 
+
+forecasting
+
+ 8.
+
+Practical: Creating Geospatial 
+
+feature maps in Tableau using 
+
+Geospatial Data.
+
+ 9.
+
+Create Dashboard and 
+
+Storytelling using tabl
